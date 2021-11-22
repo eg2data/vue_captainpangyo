@@ -20,6 +20,8 @@
         <div v-show="load">
             Loading..
         </div>
+        <input type="text" v-model="message"/>
+        <p> {{ message }} </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -27,7 +29,7 @@
         new Vue({
            el: '#app',
             data: {
-               message: 'hai',
+                message: 'hai',
                 num: 10,
                 uuid: "abcdefg",
                 load: true,
@@ -35,8 +37,8 @@
             computed: {
                doubleNum: function() {
                    return this.num * 2;
-               }
-            }
+               },
+            },
         });
     </script>
 </body>
